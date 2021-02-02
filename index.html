@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>barbershop</title>
+	<title>index</title>
 	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="header_main">
 		
 		<nav class="navigation">
 			<a class="navigation_logo">
-			<img src="img/logo.svg" width="368" height="153" alt="логотип барбершопа">
+			<img src="img/index/index-logo.svg" width="371" height="155"   alt="логотип барбершопа">
 			</a>
 			<ul class="site_navigation">
-				<li>информация</li>
-				<li>новости</li>
-				<li>прайс-лист</li>
-				<li>магазин</li>
-				<li>контакты</li>
+				<li><a href="#">информация</a></li>
+				<li><a href="#">новости</a></li>
+				<li><a href="#">прайс-лист</a></li>
+				<li><a href="#">магазин</a></li>
+				<li><a href="#">контакты</a></li>
 			</ul>
 			<ul class="user_navigation">
-				<li>вход</li>
+				<li><a href="#">вход</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -35,18 +39,20 @@
 				</li>
 
 				<li class="advantages_item">
-					<h3>БЫСТРО</h3>
-					<p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ</p>
+					<h3>КРУТО</h3>
+					<p>ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ.
+					МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО!</p>
 				</li>
 
 				<li class="advantages_item">
-					<h3>БЫСТРО</h3>
-					<p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ</p>
+					<h3>ДОРОГО</h3>
+					<p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
 				</li>
 			</ul>
 			
 		</section>
 
+		<div class="index_columns">
 		<section class="news">
 			<h2 class="news_title">новости</h2>
 			<ul class="news_list">
@@ -55,8 +61,8 @@
 					<time datetime="2019-01-13">13 января</time>
 				</li>
 				<li class="news_item">
-					<p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
-					<time datetime="2019-01-13">13 января</time>
+					<p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
+					<time datetime="2019-01-13">17 января</time>
 				</li>
 			</ul>
 			
@@ -65,11 +71,13 @@
 
 		<section class="gallery">
 			<h2 class="gallery_title">фотогалерея</h2>
-			<img src="img/1.png" alt="интерьер" width="286" height="164">
-			<span class="gallery_batton_back">назад</span>
-			<span class="gallery_batton_next">вперед</span>
+			<img src="img/index/first.jpg" alt="интерьер" width="286" height="164">
+			<button class="button gallery_batton_back" type="button">назад</button>
+			<button class="button gallery_batton_next" type="button">вперед</button>
 		</section>
+		</div>
 
+		<div class="index_columns">
 		<section class="contact">
 			<h2 class="contact_title">контактная информация</h2>
 			<p class="contact_text">БАРБЕРШОП «БОРОДИНСКИЙ»<br>
@@ -80,16 +88,42 @@
 				ПН—ПТ: С 10:00 ДО 22:00<br>
 				СБ—ВС: С 10:00 ДО 19:00
 			</p>
-			<a href="" class="batton">назад</a>
-			<a href="" class="batton">вперед</a>
+			<a href="" class="button">как проехать</a>
+			<a href="" class="button">обратная связь</a>
 		</section>
 
 		<section class="record">
 			<h2 class="record_title">записаться</h2>
 			<p class="record_info">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ </p>
-			<!-- ТУТ БУДУТ ФОРМЫ -->
+			
+			<form class="recording"	 action="" method="post">
+				<p class="recording_item">
+					<label for="recording_date">дата</label>
+					<input id="recording_date" type="text" name="date" placeholder="08.10.2017">
+				</p>
+
+				<p class="recording_item">
+					<label for="recording_time">время</label>
+					<input id="recording_time" type="text" name="time" placeholder="10:00">
+				</p>
+
+				<p class="recording_item">
+					<label for="recording_text">ваша имя</label>
+					<input id="recording_text" type="text" name="name" placeholder="Борода">
+			    </p>
+
+			    <p class="recording_item">
+					<label for="recording_tel">телефон</label>
+					<input id="recording_tel" type="tel" name="tel" placeholder="+7 123 456-48-48">
+				
+				</p>
+				<p>
+					<button class="button" type="submit">отправить</button>
+				</p>
+			</form>
 			
 		</section>
+	</div>
 	</main>
 
 	<footer class="footer">
@@ -102,9 +136,9 @@
 		<div class="footer_social">
 			<p>давай дружить</p>
 			<ul>
-				<li><a class="social_button" href="">vk</a></li>
-				<li><a class="social_button" href="">facebook</a></li>
-				<li><a class="social_button" href="">instagram</a></li>
+				<li><a class="social_button" href="" aria-label="vk">vk</a></li>
+				<li><a class="social_button" href="" aria-label="facebook">facebook</a></li>
+				<li><a class="social_button" href="" aria-label="instagram">instagram</a></li>
 			</ul>
 		</div>
 
@@ -117,8 +151,29 @@
 	<section class="conect_user">
 		<h2>личный кабинет</h2>
 		<p>Введите свой логин и пароль</p>
-		<!-- ТУТ БУДУТ ФОРМЫ -->
-		<span class="user_close">x</span>
+		
+		<form class="user_connect" action="" method="post">
+			<p>
+				<label class="visually_hidden" for="user_login">login</label>
+				<input id="user_login" type="text" name="login" placeholder="login">
+			</p>
+
+			<p>
+				<label class="visually_hidden" for="user_password">password</label>
+				<input id="user_password" type="password" name="password" placeholder="password">
+			</p>
+
+			<p>
+				<label for="user_remember">запомнить меня</label>
+				<input id="user_remember" type="checkbox" name="">
+				<a href="#">Я забыл пароль!</a>
+			</p>
+
+				<button type="submit">войти</button>
+				<button type="submit" class="user_close">x</button>
+			</form>
+
+		
 	</section>
 
 	<section class="conect_map">
